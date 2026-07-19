@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Smart Calorie Tracking & Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-wrapper">
+    <div class="auth-panel">
+      <div class="auth-brand">
+        <svg viewBox="0 0 100 100" class="brand-icon" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" fill="rgba(255,255,255,0.15)"/>
+          <path d="M50 78c-14-9-26-19-26-33 0-10 8-17 17-17 5 0 9 2 9 6 0-4 4-6 9-6 9 0 17 7 17 17 0 14-12 24-26 33z" fill="#ffffff"/>
+          <path d="M50 40v22M40 51h20" stroke="#2e7d5b" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h2>Smart Calorie Tracking &amp; Wellness</h2>
+        <p>Track your BMI, meals, weight and skin care — all in one healthy habit.</p>
+        <ul class="auth-highlights">
+          <li>✔ BMI &amp; daily calorie planner</li>
+          <li>✔ Day-wise food &amp; protein tracker</li>
+          <li>✔ Safe weight-loss progress alerts</li>
+        </ul>
+      </div>
+
+      <div class="auth-card">
+        <h1>Welcome Back</h1>
+        <p class="auth-subtext">Login to continue your wellness journey</p>
+
+        <div id="errorBox" class="alert red" style="display:none;"></div>
+
+        <form id="loginForm" class="auth-form">
+          <label>Email
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </label>
+          <label>Password
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </label>
+          <button type="submit">Login</button>
+        </form>
+
+        <p class="auth-switch">
+          Don't have an account? <a href="signup.html">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

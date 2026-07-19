@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Tracker - Smart Calorie Tracking and Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Smart Calorie Tracking &amp; Wellness</h1>
+    <nav>
+      <a href="index.html">Home / BMI</a>
+      <a href="tracker.html" class="active">Food Tracker</a>
+      <a href="progress.html">Progress</a>
+      <a href="skin.html">Skin Type</a>
+      <a href="exercise.html">Exercise</a>
+    </nav>
+    <div class="topbar-user">
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Select Day</h2>
+      <div id="dayTabs" class="day-tabs"></div>
+      <button id="addDayBtn" class="secondary-btn">+ Add New Day</button>
+    </section>
+
+    <section class="card">
+      <div class="day-header">
+        <h2 id="currentDayTitle">Day 1</h2>
+        <div class="day-total">
+          <span class="label">Total Today</span>
+          <span class="value" id="dayTotalCalories">0 kcal</span>
+          <span class="tag" id="dayTotalProtein">0 g protein</span>
+        </div>
+      </div>
+
+      <div id="slotsContainer"></div>
+    </section>
+
+    <section class="card">
+      <h2>Calendar Overview</h2>
+      <p class="subtext">Green tick = meal logged for that slot.</p>
+      <div class="table-wrap">
+        <table class="overview-table" id="overviewTable">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Morning</th>
+              <th>Lunch</th>
+              <th>Evening Snacks</th>
+              <th>Dinner</th>
+            </tr>
+          </thead>
+          <tbody id="overviewBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <datalist id="foodOptions"></datalist>
+
+  <script src="js/auth-guard.js"></script>
+  <script src="js/tracker.js"></script>
+</body>
+</html>

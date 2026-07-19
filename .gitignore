@@ -1,0 +1,4 @@
+node_modules/
+database/wellness.db
+database/wellness.db-shm
+database/wellness.db-wal

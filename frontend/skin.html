@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Type Quiz - Smart Calorie Tracking and Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Smart Calorie Tracking &amp; Wellness</h1>
+    <nav>
+      <a href="index.html">Home / BMI</a>
+      <a href="tracker.html">Food Tracker</a>
+      <a href="progress.html">Progress</a>
+      <a href="skin.html" class="active">Skin Type</a>
+      <a href="exercise.html">Exercise</a>
+    </nav>
+    <div class="topbar-user">
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Find Your Skin Type</h2>
+      <p class="subtext">Answer these 4 quick questions to know your skin type and get care tips.</p>
+
+      <form id="skinForm">
+
+        <div class="quiz-question">
+          <p class="q-title">1. By afternoon, how does your face usually feel?</p>
+          <label class="quiz-option"><input type="radio" name="q1" value="oily" required> Very shiny and oily all over</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="dry"> Feels tight or dry</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="combination"> Oily only on nose/forehead, rest normal</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="normal"> Comfortable, no oiliness or dryness</label>
+        </div>
+
+        <div class="quiz-question">
+          <p class="q-title">2. How often do you get pimples or acne?</p>
+          <label class="quiz-option"><input type="radio" name="q2" value="oily" required> Very frequently</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="dry"> Rarely, but skin flakes/peels</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="combination"> Sometimes, mostly on T-zone</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="normal"> Rarely or never</label>
+        </div>
+
+        <div class="quiz-question">
+          <p class="q-title">3. How visible are your skin pores?</p>
+          <label class="quiz-option"><input type="radio" name="q3" value="oily" required> Large and clearly visible</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="dry"> Very small, barely visible</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="combination"> Visible only on nose/forehead</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="normal"> Small and even all over</label>
+        </div>
+
+        <div class="quiz-question">
+          <p class="q-title">4. One hour after washing your face, your skin is:</p>
+          <label class="quiz-option"><input type="radio" name="q4" value="oily" required> Oily and shiny again quickly</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="dry"> Feels dry, tight, or flaky</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="combination"> T-zone oily, cheeks feel fine</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="normal"> Balanced and comfortable</label>
+        </div>
+        <button type="submit">See My Skin Type</button>
+      </form>
+    </section>
+    <section class="card" id="resultCard" style="display:none;">
+      <h2>Your Skin Type</h2>
+      <div class="result-box skin-result">
+        <span class="label">Skin Type</span>
+        <span class="value" id="skinTypeValue">--</span>
+      </div>
+      <h3 class="tips-heading">Care Tips</h3>
+      <ul id="tipsList" class="tips-list"></ul>
+    </section>
+  </main>
+
+  <script src="js/auth-guard.js"></script>
+  <script src="js/skin.js"></script>
+</body>
+</html>

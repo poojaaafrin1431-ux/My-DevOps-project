@@ -1,0 +1,10 @@
+services:
+  wellness-app:
+    build: .
+    container_name: smart-calorie-wellness
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persist the SQLite database on the host so data survives container restarts/rebuilds
+      - ./database:/app/database
+    restart: unless-stopped

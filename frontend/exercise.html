@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise Recommendation - Smart Calorie Tracking and Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Smart Calorie Tracking &amp; Wellness</h1>
+    <nav>
+      <a href="index.html">Home / BMI</a>
+      <a href="tracker.html">Food Tracker</a>
+      <a href="progress.html">Progress</a>
+      <a href="skin.html">Skin Type</a>
+      <a href="exercise.html" class="active">Exercise</a>
+    </nav>
+    <div class="topbar-user">
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Where do you want to reduce fat?</h2>
+      <p class="subtext">Select a body area to get targeted exercise recommendations.</p>
+      <div id="bodyPartButtons" class="bodypart-grid"></div>
+    </section>
+
+    <section class="card" id="resultCard" style="display:none;">
+      <h2 id="selectedPartTitle">Exercises</h2>
+
+      <div class="level-tabs" id="levelTabs"></div>
+
+      <div id="exerciseList" class="exercise-list"></div>
+    </section>
+
+  </main>
+
+  <script src="js/auth-guard.js"></script>
+  <script src="js/exercise.js"></script>
+</body>
+</html>
